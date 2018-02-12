@@ -1,7 +1,14 @@
 package com.wozu.springdemo;
 
-//Add person model
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+//Make model an Entity
+@Entity
 public class Person {
+	@Id
+	@GeneratedValue
 	private Long id;
 	private String firstName;
 	private String lastName;
@@ -33,9 +40,5 @@ public class Person {
 	
 	public Long getId() {
 		return this.id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 }

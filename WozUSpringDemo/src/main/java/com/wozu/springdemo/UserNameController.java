@@ -19,7 +19,6 @@ public class UserNameController {
 		return "Your friends name is " + userName;
 	}
 	
-	//Uses model for parameter and post back
 	@RequestMapping(value="/user/add", method=RequestMethod.POST)
 	public Person addPerson(Person person) {
 		return person;
