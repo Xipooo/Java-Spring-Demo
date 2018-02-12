@@ -9,15 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class UserNameController {
 	
-	//GET Method with Parameter: Needs PathVariable annotation
 	@RequestMapping("/user/{userName}")
 	public String getUserName(@PathVariable String userName) {
 		return "You used the name " + userName;
 	}
 	
-	//POST Method with Parameter
 	@RequestMapping(value = "/user", method=RequestMethod.POST)
 	public String postUserName(String userName) {
 		return "Your friends name is " + userName;
+	}
+	
+	//Uses model for parameter and post back
+	@RequestMapping(value="/user/add", method=RequestMethod.POST)
+	public Person addPerson(Person person) {
+		return person;
 	}
 }
