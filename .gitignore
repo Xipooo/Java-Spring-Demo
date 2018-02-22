@@ -13,3 +13,6 @@ buildNumber.properties
 /.metadata/
 /.metadata/
 .recommenders/
+.recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/write.lock
+WozUSpringDemo/bin/
+Servers/
