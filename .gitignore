@@ -15,7 +15,6 @@ buildNumber.properties
 .recommenders/
 .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/write.lock
 WozUSpringDemo/bin/
-Servers/
-Servers/.settings/org.eclipse.wst.server.core.prefs
+Servers/*
 Servers/.settings/org.eclipse.wst.server.core.prefs
 Servers/Pivotal tc Server Developer Edition v3.2-config/catalina.properties
