@@ -4,17 +4,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 // Add WebSecurityConfig class to configure security
 @Configuration
-@EnableWebMvc
-public class WebSecurityConfig extends WebMvcConfigurerAdapter {
-	protected void configure(HttpSecurity http) throws Exception {
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/members").permitAll()
+                .antMatchers("/", "/security").permitAll()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
@@ -25,8 +26,6 @@ public class WebSecurityConfig extends WebMvcConfigurerAdapter {
                 .permitAll();
     }
 
-	// Using in memory authentication for demo - should be replaced with database and encryption implementation
-	// https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
