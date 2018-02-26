@@ -9,14 +9,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Configuration
 @EnableWebMvc
 public class MvcConfiguration extends WebMvcConfigurerAdapter {
-	// Add View Controller for Login page and 403 Unauthorized
+	// Add View Controller for Login page
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		super.addViewControllers(registry);
 		registry.addViewController("/security").setViewName("security");
 		registry.addViewController("/members").setViewName("members");
 		registry.addViewController("/login").setViewName("login");
-		registry.addViewController("/403").setViewName("403");
 	}
 
 	@Override
