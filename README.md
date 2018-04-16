@@ -15,9 +15,9 @@ Each new branch step has comments included at the changes to indicate what the c
 
 You can use the GitHub comparison tool to view the differences between branches and see the changes from step to step.
 * [Master -> Step-1](https://github.com/Xipooo/Java-Spring-Demo/compare/master...Step-1)
+* [Step-1 -> Step-2](https://github.com/Xipooo/Java-Spring-Demo/compare/Step-1...Step-2)
 * [Step-2 -> Step-3](https://github.com/Xipooo/Java-Spring-Demo/compare/Step-2...Step-3)
 * [Step-3 -> Step-4](https://github.com/Xipooo/Java-Spring-Demo/compare/Step-3...Step-4)
-* [Step-1 -> Step-2](https://github.com/Xipooo/Java-Spring-Demo/compare/Step-1...Step-2)
 * [Step-4 -> Step-5](https://github.com/Xipooo/Java-Spring-Demo/compare/Step-4...Step-5)
 * [Step-5 -> Step-6](https://github.com/Xipooo/Java-Spring-Demo/compare/Step-5...Step-6)
 * [Step-6 -> Step-7](https://github.com/Xipooo/Java-Spring-Demo/compare/Step-6...Step-7)
